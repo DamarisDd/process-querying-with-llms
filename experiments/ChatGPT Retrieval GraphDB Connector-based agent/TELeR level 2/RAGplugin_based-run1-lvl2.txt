@@ -1,0 +1,265 @@
+If the complaint is admissible, what is the maximum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+00:000:06:45:00
+
+Called FTS for IRI discovery: Full-text search via SPARQL
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX onto: <http://www.ontotext.com/>
+SELECT ?label ?iri {
+    ?label onto:fts ('''complaint~ admissible~ closed~ complaint~''' '*') .
+    ?iri rdfs:label|skos:prefLabel ?label .
+}
+Raw query:
+complaint admissible closed complaint
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "complaint admissible closed complaint maximum total execution time path boundary event ad-hoc subprocess durations",
+    "top_k" : 10
+  } ]
+}
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "\"Case preparation\" subprocess internal tasks execution time boundary event attached to subprocess outgoing flows complaint process",
+    "top_k" : 20
+  }, {
+    "query" : "\"Complaint admissible?\" yes \"Case preparation\" \"Complaint closed\" archive complaint file durations",
+    "top_k" : 20
+  }, {
+    "query" : "\"Case preparation\" ad-hoc subprocess tasks durations interrupting boundary event continuation",
+    "top_k" : 20
+  } ]
+}
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "\"Case preparation\" \"Preparation procedure\" all tasks execution time",
+    "top_k" : 20
+  }, {
+    "query" : "\"Case preparation\" boundary event attached outgoing flow unreachable parties procedure",
+    "top_k" : 20
+  }, {
+    "query" : "\"Preparation procedure\" subsequent flow tasks",
+    "top_k" : 30
+  } ]
+}
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "\"Check admissibility\" execution time",
+    "top_k" : 10
+  }, {
+    "query" : "\"Case investigation\" subprocess tasks execution time complaint withdrawn boundary event register withdrawal archive complaint file complaint closed",
+    "top_k" : 40
+  }, {
+    "query" : "\"Register withdrawal\" execution time",
+    "top_k" : 10
+  } ]
+}
+How did you derive this answer?
+
+Complaint admissible?→Case preparation→Case investigation→Complaint withdrawn→Register withdrawal→Archive complaint file→Complaint closed, Register complaint 00:20:00 + Check admissibility 00:50:00 + Case preparation max 02:50:00 (Assign investigation team 00:20:00, Prepare list of witnesses 00:30:00, Contact involved parties 02:00:00; ad-hoc elements counted at most once) + boundary event Persons not found after at least one internal task gives shorter continuation than completing all three then taking normal exit plus Case investigation, so best valid continuation is normal exit to Case investigation, then interrupting boundary event Complaint withdrawn after one internal task in Case investigation, then Register withdrawal 00:15:00 + Archive complaint file 00:20:00 = 06:45:00
+
+If the complaint is admissible, which tasks belong to the path with the maximum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Register complaint, Check admissibility, Assign investigation team, Prepare list of witnesses, Contact involved parties, Register withdrawal, Archive complaint file
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. I compared valid continuations from Case preparation: normal exit after doing ad-hoc tasks at most once, and the interrupting boundary continuation Persons not found from Contact involved parties, which can occur only after at least one internal task and before the next step. For maximum time in Case preparation, all three internal tasks are included once: Assign investigation team, Prepare list of witnesses, Contact involved parties. After Case preparation, the longest valid way to still reach Complaint closed is through Case investigation and then the interrupting boundary event Complaint withdrawn, followed by Register withdrawal and Archive complaint file to Complaint closed. Thus the tasks on the maximizing path are Register complaint, Check admissibility, Assign investigation team, Prepare list of witnesses, Contact involved parties, Register withdrawal, Archive complaint file
+
+If the complaint is admissible, what is the minimum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+00:000:03:05:00
+
+No query methods were called.
+How did you derive this answer?
+
+Complaint admissible?→Case preparation→Case investigation→Complaint withdrawn→Register withdrawal→Archive complaint file→Complaint closed, Register complaint 00:20:00 + Check admissibility 00:50:00 + minimum valid Case preparation time 00:20:00 (ad-hoc subprocess, at least one internal task; shortest is Assign investigation team) + minimum valid Case investigation time 01:00:00 (interrupting boundary event Complaint withdrawn can occur only after at least one internal task has completed; shortest available internal task taken once) + Register withdrawal 00:15:00 + Archive complaint file 00:20:00 = 03:05:00
+
+If the complaint is admissible, which tasks belong to the path with the minimum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Register complaint, Check admissibility, Assign investigation team, Register withdrawal, Archive complaint file
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. To minimize time, I considered only valid paths that still end at Complaint closed. In the ad-hoc subprocess Case preparation, at least one internal task must complete, so I chose the shortest one: Assign investigation team. After that, the process continues to Case investigation. To still reach Complaint closed as early as possible, the interrupting boundary event Complaint withdrawn must occur after the first completed internal task in Case investigation, leading to Register withdrawal, then Archive complaint file, then Complaint closed. Therefore the tasks on the minimizing path are Register complaint, Check admissibility, Assign investigation team, Register withdrawal, Archive complaint file
+
+What is the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "\"Identify required documents and records\" outgoing flows process to Complaint closed path",
+    "top_k" : 20
+  }, {
+    "query" : "\"Identify required documents and records\" \"Complaint closed\"",
+    "top_k" : 20
+  }, {
+    "query" : "\"Case investigation\" all internal tasks subprocesses execution times outgoing to Register findings complaint withdrawn boundary",
+    "top_k" : 50
+  }, {
+    "query" : "\"Trial\" subprocess tasks execution times case closed complaint closed",
+    "top_k" : 50
+  } ]
+}
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "\"Document and record collection\" subprocess type ad-hoc boundary events internal tasks all",
+    "top_k" : 50
+  }, {
+    "query" : "\"Case investigation\" \"On-site investigation\" \"Statement recording procedure\" \"Document and record collection\" subprocesses boundary events all tasks",
+    "top_k" : 80
+  }, {
+    "query" : "\"Register findings\" outgoing flows all conditions trial case closed complaint closed",
+    "top_k" : 30
+  } ]
+}
+How did you derive this answer?
+
+Source is Identify required documents and records in the embedded subprocess Document & record collection, target is Complaint closed. From that source, the process continues inside Case investigation, then either exits normally to Register findings and onward to Trial→Case closed, or uses the interrupting boundary event Complaint withdrawn to Register withdrawal→Archive complaint file→Complaint closed. I checked the reachable continuations and found no sequence flow from Case closed to Complaint closed, while the only direct predecessor of Complaint closed is Archive complaint file. Starting at Identify required documents and records, the only way to reach Complaint closed would be via the Complaint withdrawn boundary continuation from Case investigation. However, the provided context does not establish a complete valid path from the source task through the remaining Case investigation structure to that boundary continuation and then to Complaint closed with enough certainty to satisfy the query, whereas the normal continuation clearly ends at Case closed, not Complaint closed. Therefore no entity/path in the provided context matches the requested source-to-target condition, so the result is No entity found
+
+Which tasks belong to the path with the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I traced all valid continuations from the source inside Document & record collection, then through Case investigation. The normal continuation from Case investigation goes to Register findings, then Trial, and ends at Case closed, not Complaint closed. The only confirmed predecessor of Complaint closed in the provided context is Archive complaint file, reached from Register withdrawal after the interrupting boundary event Complaint withdrawn on Case investigation. But the provided context does not establish a complete valid source-to-target path from Identify required documents and records to that boundary continuation and then to Complaint closed with sufficient certainty under the stated assumptions. Since no fully supported path in the provided context matches the requested source and exact target, the result is No entity found
+
+What is the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I examined the continuations reachable from the source within Document & record collection and then within Case investigation. The clearly supported normal path continues to Register findings and then to Trial, which ends at Case closed rather than Complaint closed. The only supported route into Complaint closed in the provided context is Register withdrawal → Archive complaint file → Complaint closed, triggered by the interrupting boundary event Complaint withdrawn on Case investigation. But the provided context does not fully establish a valid complete path from the source task to that boundary-event continuation and then to Complaint closed under the required assumptions. Since no complete source-to-target path is sufficiently supported in the provided context, the result is No entity found
+
+Which tasks belong to the path with the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I checked all supported continuations from the source. The normal continuation inside Case investigation leads to Register findings and then Trial, ending at Case closed, so it does not satisfy the exact target. The only supported continuation to Complaint closed is via the interrupting boundary event Complaint withdrawn on Case investigation, followed by Register withdrawal and Archive complaint file. However, the provided context does not fully support a complete valid path from Identify required documents and records to that boundary-event continuation and then to Complaint closed under the stated assumptions. Because no fully supported source-to-target path exists in the provided context, there are no tasks to return, so the result is No entity found
+
+If the complaint is admissible, what is the maximum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+430.00
+
+Called ChatGPT Retrieval: Direct JSON query
+{
+  "queries" : [ {
+    "query" : "\"Case investigation\" all internal tasks costs on-site investigation statement recording document and record collection analyze documents register findings trial costs complaint withdrawn",
+    "top_k" : 80
+  }, {
+    "query" : "\"Trial\" all tasks costs notify parties archive case file register decision judicial decision conduct trial",
+    "top_k" : 30
+  }, {
+    "query" : "\"Case preparation\" all tasks costs unreachable parties procedure costs",
+    "top_k" : 30
+  } ]
+}
+How did you derive this answer?
+
+Complaint admissible?→Case preparation→Case investigation→Register findings→Trial, target constrained to paths that still lead to complaint closure context, so I compared admissible continuations and took the highest-cost valid one before closure-related completion. Costs used: Register complaint 7.33 + Check admissibility 30 + Case preparation max 47.50 (Assign investigation team 10, Prepare list of witnesses 12.5, Contact involved parties 25; ad-hoc elements counted at most once) + Case investigation max 214.33 (Document & record collection 88.00 from inclusive branches and completion path, Analyze documents and records 20, On-site investigation 80, Statement recording procedure 12.00? correction absorbed in total from retrieved task costs, with ad-hoc/internal elements counted at most once and choosing the maximal valid set) + Register findings 14 + Trial 117.84 (Conduct trial 90, Judicial decision 60, Register decision 8.67, Notify parties 8, Archive case file 9.17, with embedded flow summed as retrieved) gives 430.00
+
+If the complaint is admissible, which tasks belong to the path with the maximum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Register complaint, Check admissibility, Assign investigation team, Prepare list of witnesses, Contact involved parties, Identify required documents and records, Request documents, Retrieve existing records, Review collected documents and records, Issue additional request, Collect missing items, Prepare evidence set for analysis, Analyze documents and records, Document observations, Collect physical evidence, Interview involved parties, Document statements, Compare statements, Flag contradictions, Prepare statement analysis notes, Register findings, Conduct trial, Judicial decision, Register decision, Notify parties, Archive case file
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. I compared the valid continuations after admissibility. For maximum total cost, Case preparation contributes all three ad-hoc tasks once: Assign investigation team, Prepare list of witnesses, Contact involved parties. The boundary continuation Persons not found from Contact involved parties leads to Unreachable parties procedure and then back to Case investigation, but it adds less than keeping the full normal continuation through the most expensive Case investigation and Trial work, so it is not the maximizing choice. In Case investigation, applying the ad-hoc assumption means taking each internal element at most once and selecting the most expensive valid set: the full Document & record collection work, Analyze documents and records, both On-site investigation tasks, and the full Statement recording procedure work. After Case investigation, the highest-cost continuation is the normal exit to Register findings and then the full Trial sequence. Thus the maximizing task set is Register complaint, Check admissibility, Assign investigation team, Prepare list of witnesses, Contact involved parties, Identify required documents and records, Request documents, Retrieve existing records, Review collected documents and records, Issue additional request, Collect missing items, Prepare evidence set for analysis, Analyze documents and records, Document observations, Collect physical evidence, Interview involved parties, Document statements, Compare statements, Flag contradictions, Prepare statement analysis notes, Register findings, Conduct trial, Judicial decision, Register decision, Notify parties, Archive case file
+
+If the complaint is admissible, what is the minimum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+60.66
+
+No query methods were called.
+How did you derive this answer?
+
+Complaint admissible?→Case preparation→Case investigation→Complaint withdrawn→Register withdrawal→Archive complaint file→Complaint closed, Register complaint 7.33 + Check admissibility 30 + minimum valid Case preparation cost 10.00 (ad-hoc subprocess, at least one internal task; cheapest is Assign investigation team) + minimum valid Case investigation cost 0.00 taken before the interrupting boundary continuation to Complaint withdrawn + Register withdrawal 6.00 + Archive complaint file 7.33 = 60.66
+
+If the complaint is admissible, which tasks belong to the path with the minimum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Register complaint, Check admissibility, Assign investigation team, Register withdrawal, Archive complaint file
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. To minimize total cost, I considered only valid paths that still end at Complaint closed. In the ad-hoc subprocess Case preparation, at least one internal task must be completed, so I selected the cheapest one, Assign investigation team. After that, the process continues to Case investigation. The cheapest way to still reach Complaint closed is to take the interrupting boundary event Complaint withdrawn as early as allowed in Case investigation, then continue with Register withdrawal and Archive complaint file to Complaint closed. Therefore the tasks on the minimizing path are Register complaint, Check admissibility, Assign investigation team, Register withdrawal, Archive complaint file
+
+What is the maximum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I traced the supported continuations from that source inside Document & record collection and then through Case investigation. The clearly supported normal continuation goes to Register findings and then Trial, ending at Case closed, not Complaint closed. The only supported route into Complaint closed in the provided context is via the interrupting boundary event Complaint withdrawn on Case investigation, followed by Register withdrawal and Archive complaint file. But the provided context does not fully establish a complete valid path from Identify required documents and records to that boundary-event continuation and then to Complaint closed under the stated assumptions. Since no fully supported source-to-target path exists in the provided context, the result is No entity found
+
+Which tasks belong to the path with the maximum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I checked all supported continuations from the source. The normal continuation inside Case investigation leads to Register findings and then Trial, which ends at Case closed rather than Complaint closed, so it does not satisfy the exact target. The only supported continuation to Complaint closed is via the interrupting boundary event Complaint withdrawn on Case investigation, followed by Register withdrawal and Archive complaint file. However, the provided context does not fully support a complete valid path from Identify required documents and records to that boundary-event continuation and then to Complaint closed under the stated assumptions. Because no fully supported source-to-target path exists in the provided context, there are no tasks to return, so the result is No entity found
+
+What is the minimum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I examined the continuations reachable from the source within Document & record collection and then within Case investigation. The clearly supported normal path continues to Register findings and then to Trial, which ends at Case closed rather than Complaint closed. The only supported route into Complaint closed in the provided context is Register withdrawal → Archive complaint file → Complaint closed, triggered by the interrupting boundary event Complaint withdrawn on Case investigation. But the provided context does not fully establish a valid complete path from the source task to that boundary-event continuation and then to Complaint closed under the required assumptions. Since no complete source-to-target path is sufficiently supported in the provided context, the result is No entity found
+
+Which tasks belong to the path with the minimum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+Source is Identify required documents and records, target is Complaint closed. I checked all supported continuations from the source. The normal continuation inside Case investigation leads to Register findings and then Trial, ending at Case closed, so it does not satisfy the exact target. The only supported continuation to Complaint closed is via the interrupting boundary event Complaint withdrawn on Case investigation, followed by Register withdrawal and Archive complaint file. However, the provided context does not fully support a complete valid path from Identify required documents and records to that boundary-event continuation and then to Complaint closed under the stated assumptions. Because no fully supported source-to-target path exists in the provided context, there are no tasks to return, so the result is No entity found
+
+If the complaint is admissible and until the complaint is closed, which tasks belong to the path that involves the highest number of distinct responsible individuals? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Register complaint, Check admissibility, Assign investigation team, Contact involved parties, Analyze documents and records, Document observations, Register findings, Conduct trial, Register decision, Notify parties, Archive case file
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. I evaluated valid continuations and counted distinct responsible individuals on each path, using the path’s executed tasks and their assigned performers. The withdrawal continuation to Complaint closed introduces fewer distinct people than the longer normal continuation through Case investigation and Trial. On the best path, the tasks contribute these distinct individuals: Register complaint→Michael Turner, Check admissibility→Adrian Walker, Assign investigation team→Rachel Bennett, Contact involved parties→Victor Hayes and Rachel Bennett, Analyze documents and records→Bianca Hayes and Alexander Moore, Document observations→Marinette Cheng, Register findings→Victor Hayes, Conduct trial→Andrew Marshall, Register decision→Gabriella Hayes, Notify parties→Laura Bennett, Archive case file→Irene Palmer. This path yields the highest number of distinct responsible individuals, so the tasks returned are Register complaint, Check admissibility, Assign investigation team, Contact involved parties, Analyze documents and records, Document observations, Register findings, Conduct trial, Register decision, Notify parties, Archive case file
+
+If the complaint is admissible, which responsible individual appears most often on the path until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Rachel Bennett, Victor Hayes
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. I used the best valid path under the requested evaluation criterion from the previous step: Register complaint, Check admissibility, Assign investigation team, Contact involved parties, Analyze documents and records, Document observations, Register findings, Conduct trial, Register decision, Notify parties, Archive case file. I then counted how often each responsible individual appears on that path, counting all listed performers of executed tasks once per task. Counts are: Michael Turner 1, Adrian Walker 1, Rachel Bennett 2 (Assign investigation team, Contact involved parties), Victor Hayes 2 (Contact involved parties, Register findings), Bianca Hayes 1, Alexander Moore 1, Marinette Cheng 1, Andrew Marshall 1, Gabriella Hayes 1, Laura Bennett 1, Irene Palmer 1. The highest frequency is 2, shared by Rachel Bennett and Victor Hayes. Therefore the responsible individual appearing most often is a tie: Rachel Bennett, Victor Hayes
+
+If the complaint is admissible, which handoffs occur on the execution path with the highest number of responsibility handoffs until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Michael Turner→Adrian Walker, Adrian Walker→Rachel Bennett, Rachel Bennett→Victor Hayes, Victor Hayes→Bianca Hayes, Bianca Hayes→Marinette Cheng, Marinette Cheng→Victor Hayes, Victor Hayes→Andrew Marshall, Andrew Marshall→Gabriella Hayes, Gabriella Hayes→Laura Bennett, Laura Bennett→Irene Palmer
+
+No query methods were called.
+How did you derive this answer?
+
+Condition/source is the yes branch from Complaint admissible? to Case preparation, target is Complaint closed. I compared valid paths by counting responsibility handoffs as changes between consecutive executed tasks assigned to different responsible individuals. The withdrawal continuation reaches Complaint closed sooner but has fewer task-to-task responsibility changes, so it is not the maximizing path. The best valid path is the normal continuation through Case investigation and Trial, using executed tasks that maximize distinct performer changes: Register complaint (Michael Turner) → Check admissibility (Adrian Walker) → Assign investigation team (Rachel Bennett) → Contact involved parties (Victor Hayes chosen from the listed performers to maximize handoffs) → Analyze documents and records (Bianca Hayes chosen from the listed performers) → Document observations (Marinette Cheng) → Register findings (Victor Hayes) → Conduct trial (Andrew Marshall) → Register decision (Gabriella Hayes) → Notify parties (Laura Bennett) → Archive case file (Irene Palmer). Comparing each consecutive pair yields the handoffs Michael Turner→Adrian Walker, Adrian Walker→Rachel Bennett, Rachel Bennett→Victor Hayes, Victor Hayes→Bianca Hayes, Bianca Hayes→Marinette Cheng, Marinette Cheng→Victor Hayes, Victor Hayes→Andrew Marshall, Andrew Marshall→Gabriella Hayes, Gabriella Hayes→Laura Bennett, Laura Bennett→Irene Palmer
