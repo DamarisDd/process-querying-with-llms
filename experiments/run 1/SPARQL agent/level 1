@@ -1,0 +1,319 @@
+If the complaint is admissible, what is the maximum total execution time until the complaint is closed?
+
+No entity found
+
+Called SPARQL: Direct query
+PREFIX : <http://www.omilab.org#>
+PREFIX mm: <http://bee-up.omilab.org/rdf/1_7#>
+PREFIX cv: <http://www.comvantage.eu/mm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label ?time WHERE {
+  VALUES ?task {
+    :Task_BPMN-48669-Register_complaint
+    :Task_BPMN-49218-Check_admissibility
+    :Task_BPMN-48798-Assign_investigation_team
+    :Task_BPMN-48801-Prepare_list_of_witnesses
+    :Task_BPMN-48804-Contact_involved_parties
+    :Task_BPMN-49342-Identify_required_documents_and_records
+    :Task_BPMN-49346-Request_documents
+    :Task_BPMN-49356-Retrieve_existing_records
+    :Task_BPMN-49395-Review_collected_documents_and_records
+    :Task_BPMN-49405-Issue_additional_request
+    :Task_BPMN-49409-Collect_missing_items
+    :Task_BPMN-49418-Prepare_evidence_set_for_analysis
+    :Task_BPMN-48943-Interview_involved_parties
+    :Task_BPMN-49230-Document_statements
+    :Task_BPMN-49286-Compare_statements
+    :Task_BPMN-49274-Flag_contradictions
+    :Task_BPMN-49268-Confirm_consistency
+    :Task_BPMN-49271-Prepare_statement_analysis_notes
+    :Task_BPMN-49314-Document_observations
+    :Task_BPMN-49318-Collect_physical_evidence
+    :Task_BPMN-48756-Register_findings_
+    :Task_BPMN-49448-Conduct_trial
+    :Task_BPMN-48978-Judicial_decision
+    :Task_BPMN-48981-Register_decision
+    :Task_BPMN-49436-Notify_parties
+    :Task_BPMN-48996-Archive_case_file
+  }
+  ?task rdfs:label ?label ; mm:a_Execution_time ?time .
+}
+How did you derive this answer?
+
+There is no path where an admissible complaint reaches the end event "Complaint closed"; if admissible, the process goes to "Case preparation", then "Case investigation", then "Register findings", then "Trial", and ends at "Case closed" in the main process or "Case adjudicated" inside the trial subprocess. "Complaint closed" is only reached on the inadmissible branch: "Notify inadmissibility" -> "Archive complaint file" -> "Complaint closed"
+
+If the complaint is admissible, which tasks belong to the path with the maximum total execution time until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+For the admissible branch, I followed "Check admissibility" -> "Complaint admissible?" -> "Case preparation" -> "Case investigation" -> "Register findings" -> "Trial". None of these lead to the end event "Complaint closed". That end event is only on the inadmissible branch: "Complaint admissible?" -> "Notify inadmissibility" -> "Archive complaint file" -> "Complaint closed". Since no admissible path reaches "Complaint closed", there are no tasks on such a path
+
+If the complaint is admissible, what is the minimum total execution time until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I checked the admissible branch from "Complaint admissible?" and it goes to "Case preparation", then "Case investigation", then "Register findings", then "Trial". This branch does not connect to the end event "Complaint closed". "Complaint closed" is only reachable through the inadmissible branch via "Notify inadmissibility" and "Archive complaint file". Therefore no minimum execution time exists for an admissible complaint to reach "Complaint closed"
+
+If the complaint is admissible, which tasks belong to the path with the minimum total execution time until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+There is no admissible path to "Complaint closed". After "Check admissibility", the gateway "Complaint admissible?" sends admissible cases to "Case preparation", then onward to "Case investigation", "Register findings", and "Trial". The end event "Complaint closed" belongs only to the inadmissible branch after "Notify inadmissibility" and "Archive complaint file". Since no admissible path reaches that end event, no task set can be returned
+
+What is the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+"Identify required documents and records" is inside the subprocess "Document & record collection", which is referenced from the ad-hoc subprocess "Case investigation". From there, the process can continue to "Analyze documents and records", "Statement recording procedure", "Register findings", and then "Trial". None of these paths lead to the end event "Complaint closed". That end event is only on the inadmissible branch of the main process: "Notify inadmissibility" -> "Archive complaint file" -> "Complaint closed". Therefore no path exists from "Identify required documents and records" to "Complaint closed"
+
+Which tasks belong to the path with the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I traced all continuations from "Identify required documents and records" within "Document & record collection", then back through its parent subprocess "Case investigation" in the main process. That route can proceed through investigation-related work and eventually toward "Trial", but it never connects to the end event "Complaint closed". "Complaint closed" is only reachable on the separate inadmissible branch after "Notify inadmissibility" and "Archive complaint file". Since no path exists from the starting task to that end event, there is no corresponding task set
+
+What is the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I followed the process from "Identify required documents and records" through its subprocess and parent process. Although it can lead onward through investigation and trial-related activities, there is no connection from that branch to the end event "Complaint closed". The only route to "Complaint closed" is the inadmissible branch: "Notify inadmissibility" -> "Archive complaint file" -> "Complaint closed". Because no path exists from the given start task to that end event, no minimum total execution time can be computed
+
+Which tasks belong to the path with the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+There is no valid path from "Identify required documents and records" to the end event "Complaint closed". The starting task is inside the "Document & record collection" subprocess, which belongs to the investigation branch of the process. That branch continues toward later investigation and trial activities, not toward "Complaint closed". The end event "Complaint closed" is only reached on the inadmissible branch after "Notify inadmissibility" and "Archive complaint file". Since no such path exists, there are no tasks to list
+
+If the complaint is admissible, what is the maximum total cost until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I followed the admissible branch from Complaint admissible? via yes to Case preparation, then Case investigation, Register findings, and Trial. That branch ends at Case closed in the main process, with Trial itself ending at Case adjudicated. The end event Complaint closed is only reachable on the inadmissible branch through Notify inadmissibility and Archive complaint file. Since no admissible path reaches Complaint closed, no total cost can be computed.
+
+If the complaint is admissible, which tasks belong to the path with the maximum total cost until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I traced the process after the gateway Complaint admissible? on the yes branch. It goes through Case preparation, Case investigation, Register findings, and Trial, but never reaches the end event Complaint closed. Complaint closed is only on the no branch through Notify inadmissibility and Archive complaint file. Because there is no admissible path to Complaint closed, there is no corresponding maximum-cost task path.
+
+If the complaint is admissible, what is the minimum total cost until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I checked the admissible branch starting at the gateway Complaint admissible?. The yes branch continues to Case preparation, then Case investigation, then Register findings, then Trial. None of these connect to the end event Complaint closed. That end event is only reached on the inadmissible no branch via Notify inadmissibility and Archive complaint file. Therefore there is no admissible path to Complaint closed, so no minimum total cost exists.
+
+If the complaint is admissible, which tasks belong to the path with the minimum total cost until the complaint is closed?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I followed the admissible yes branch from Complaint admissible? and found that it proceeds through Case preparation, Case investigation, Register findings, and Trial, ending elsewhere rather than at Complaint closed. Since Complaint closed belongs only to the inadmissible no branch after Notify inadmissibility and Archive complaint file, there is no admissible path to that end event and thus no minimum-cost task set to list.
+
+What is the maximum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I traced all continuations from Identify required documents and records inside the Document & record collection subprocess, then back through Case investigation in the main process. Those continuations can lead to later investigation work and then to Trial, but not to the end event Complaint closed. Complaint closed is only reachable on the separate inadmissible branch via Notify inadmissibility and Archive complaint file. Since no path exists from the given start task to Complaint closed, no total cost can be computed.
+
+Which tasks belong to the path with the maximum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I followed the process from Identify required documents and records through its subprocess and parent process. Although that route can continue through investigation-related and trial-related work, it never reaches the end event Complaint closed. Complaint closed is only on the inadmissible branch after Notify inadmissibility and Archive complaint file. Because no valid path exists from the starting task to that end event, there is no maximum-cost task path to list.
+
+What is the minimum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I traced the outgoing flow from Identify required documents and records within Document & record collection and then the continuation through the surrounding investigation branch. That branch proceeds toward investigation and trial outcomes, not toward Complaint closed. The only route to Complaint closed is the inadmissible branch through Notify inadmissibility and Archive complaint file. Since there is no path from the given start task to Complaint closed, no minimum total cost can be determined.
+
+Which tasks belong to the path with the minimum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+There is no valid path from Identify required documents and records to Complaint closed. The starting task is inside the Document & record collection subprocess within the investigation branch, and that branch continues toward later investigation and trial activities. Complaint closed is only reached on the separate inadmissible branch after Notify inadmissibility and Archive complaint file. Since no such path exists, there are no tasks to list.
+
+If the complaint is admissible and until the complaint is closed, which tasks belong to the path that involves the highest number of distinct responsible individuals?
+
+Register complaint,Check admissibility,Assign investigation team,Prepare list of witnesses,Contact involved parties,Identify required documents and records,Request documents,Retrieve existing records,Review collected documents and records,Issue additional request,Collect missing items,Prepare evidence set for analysis,Analyze documents and records,Document observations,Collect physical evidence,Interview involved parties,Document statements,Compare statements,Flag contradictions,Prepare statement analysis notes,Register findings ,Conduct trial,Judicial decision,Register decision,Notify parties,Archive case file
+
+Called SPARQL: Direct query
+PREFIX : <http://www.omilab.org#>
+PREFIX mm: <http://bee-up.omilab.org/rdf/1_7#>
+PREFIX cv: <http://www.comvantage.eu/mm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?taskLabel ?respLabel WHERE {
+  VALUES ?task {
+    :Task_BPMN-48669-Register_complaint
+    :Task_BPMN-49218-Check_admissibility
+    :Task_BPMN-48798-Assign_investigation_team
+    :Task_BPMN-48801-Prepare_list_of_witnesses
+    :Task_BPMN-48804-Contact_involved_parties
+    :Task_BPMN-49342-Identify_required_documents_and_records
+    :Task_BPMN-49346-Request_documents
+    :Task_BPMN-49356-Retrieve_existing_records
+    :Task_BPMN-49395-Review_collected_documents_and_records
+    :Task_BPMN-49405-Issue_additional_request
+    :Task_BPMN-49409-Collect_missing_items
+    :Task_BPMN-49418-Prepare_evidence_set_for_analysis
+    :Task_BPMN-50986-Analyze_documents_and_records
+    :Task_BPMN-49314-Document_observations
+    :Task_BPMN-49318-Collect_physical_evidence
+    :Task_BPMN-51115-Interview_involved_parties
+    :Task_BPMN-51121-Document_statements
+    :Task_BPMN-51142-Compare_statements
+    :Task_BPMN-51130-Confirm_consistency
+    :Task_BPMN-51136-Flag_contradictions
+    :Task_BPMN-51133-Prepare_statement_analysis_notes
+    :Task_BPMN-48756-Register_findings_
+    :Task_BPMN-49448-Conduct_trial
+    :Task_BPMN-48978-Judicial_decision
+    :Task_BPMN-48981-Register_decision
+    :Task_BPMN-49436-Notify_parties
+    :Task_BPMN-48996-Archive_case_file
+  }
+  ?task rdfs:label ?taskLabel .
+  OPTIONAL {
+    ?task mm:r_Responsible ?resp .
+    ?resp rdfs:label ?respLabel .
+  }
+}
+ORDER BY ?taskLabel ?respLabel
+How did you derive this answer?
+
+I followed the admissible branch after Complaint admissible? to Case preparation, then Case investigation, then Register findings, then Trial. To maximize the number of distinct responsible individuals, I included all tasks inside the ad-hoc subprocesses Case preparation and Case investigation at most once, as instructed. In Case preparation, the tasks add Michael Turner, Adrian Walker, Rachel Bennett, and Victor Hayes. In Case investigation, including both embedded subprocesses and tasks adds Bianca Hayes, Samuel Grant, Alexander Moore, and Marinette Cheng; for the statement recording procedure, the branch through Flag contradictions yields the same distinct individuals as the Confirm consistency branch, so either is acceptable, and I used the Flag contradictions branch. Trial then adds Andrew Marshall, Gabriella Hayes, Laura Bennett, and Irene Palmer. Complaint closed itself is not reachable on the admissible branch, so the returned task set corresponds to the admissible path carried forward through the process while maximizing distinct responsible individuals.
+
+If the complaint is admissible, which responsible individual appears most often on the path until the complaint is closed?
+
+Bianca Hayes
+
+Called SPARQL: Direct query
+PREFIX : <http://www.omilab.org#>
+PREFIX mm: <http://bee-up.omilab.org/rdf/1_7#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?respLabel (COUNT(?task) AS ?taskCount) WHERE {
+  VALUES ?task {
+    :Task_BPMN-48669-Register_complaint
+    :Task_BPMN-49218-Check_admissibility
+    :Task_BPMN-48798-Assign_investigation_team
+    :Task_BPMN-48801-Prepare_list_of_witnesses
+    :Task_BPMN-48804-Contact_involved_parties
+    :Task_BPMN-49342-Identify_required_documents_and_records
+    :Task_BPMN-49346-Request_documents
+    :Task_BPMN-49356-Retrieve_existing_records
+    :Task_BPMN-49395-Review_collected_documents_and_records
+    :Task_BPMN-49405-Issue_additional_request
+    :Task_BPMN-49409-Collect_missing_items
+    :Task_BPMN-49418-Prepare_evidence_set_for_analysis
+    :Task_BPMN-50986-Analyze_documents_and_records
+    :Task_BPMN-49314-Document_observations
+    :Task_BPMN-49318-Collect_physical_evidence
+    :Task_BPMN-51115-Interview_involved_parties
+    :Task_BPMN-51121-Document_statements
+    :Task_BPMN-51142-Compare_statements
+    :Task_BPMN-51136-Flag_contradictions
+    :Task_BPMN-51133-Prepare_statement_analysis_notes
+    :Task_BPMN-48756-Register_findings_
+    :Task_BPMN-49448-Conduct_trial
+    :Task_BPMN-48978-Judicial_decision
+    :Task_BPMN-48981-Register_decision
+    :Task_BPMN-49436-Notify_parties
+    :Task_BPMN-48996-Archive_case_file
+  }
+  ?task mm:r_Responsible ?resp .
+  ?resp rdfs:label ?respLabel .
+}
+GROUP BY ?respLabel
+ORDER BY DESC(?taskCount) ?respLabel
+How did you derive this answer?
+
+I used the admissible path previously identified: the main flow goes through Case preparation, Case investigation, Register findings, and Trial, and for the ad-hoc subprocesses I included tasks at most once to maximize the path. Then I counted how many tasks on that path list each responsible individual. Bianca Hayes is responsible for Identify required documents and records, Review collected documents and records, Issue additional request, Prepare evidence set for analysis, Analyze documents and records, Interview involved parties, Document statements, Compare statements, Flag contradictions, and Prepare statement analysis notes, giving her the highest count.
+
+If the complaint is admissible, which handoffs occur on the execution path with the highest number of responsibility handoffs until the complaint is closed?
+
+Michael Turner->Adrian Walker,Rachel Bennett->Victor Hayes,Victor Hayes->Rachel Bennett,Rachel Bennett->Victor Hayes,Bianca Hayes->Samuel Grant,Samuel Grant->Bianca Hayes,Bianca Hayes->Samuel Grant,Samuel Grant->Bianca Hayes,Bianca Hayes->Alexander Moore,Alexander Moore->Marinette Cheng,Marinette Cheng->Bianca Hayes,Bianca Hayes->Alexander Moore,Alexander Moore->Bianca Hayes,Bianca Hayes->Andrew Marshall,Andrew Marshall->Gabriella Hayes,Gabriella Hayes->Laura Bennett,Laura Bennett->Irene Palmer
+
+Called SPARQL: Direct query
+PREFIX : <http://www.omilab.org#>
+PREFIX mm: <http://bee-up.omilab.org/rdf/1_7#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?fromLabel ?toLabel WHERE {
+  VALUES (?from ?to) {
+    (:Task_BPMN-48669-Register_complaint :Task_BPMN-49218-Check_admissibility)
+    (:Task_BPMN-48798-Assign_investigation_team :Task_BPMN-48801-Prepare_list_of_witnesses)
+    (:Task_BPMN-48801-Prepare_list_of_witnesses :Task_BPMN-48804-Contact_involved_parties)
+    (:Task_BPMN-49342-Identify_required_documents_and_records :Task_BPMN-49346-Request_documents)
+    (:Task_BPMN-49342-Identify_required_documents_and_records :Task_BPMN-49356-Retrieve_existing_records)
+    (:Task_BPMN-49346-Request_documents :Task_BPMN-49395-Review_collected_documents_and_records)
+    (:Task_BPMN-49356-Retrieve_existing_records :Task_BPMN-49395-Review_collected_documents_and_records)
+    (:Task_BPMN-49395-Review_collected_documents_and_records :Task_BPMN-49405-Issue_additional_request)
+    (:Task_BPMN-49405-Issue_additional_request :Task_BPMN-49409-Collect_missing_items)
+    (:Task_BPMN-49409-Collect_missing_items :Task_BPMN-49418-Prepare_evidence_set_for_analysis)
+    (:Task_BPMN-48955-Document_and_record_collection :Task_BPMN-50986-Analyze_documents_and_records)
+    (:Task_BPMN-51115-Interview_involved_parties :Task_BPMN-51142-Compare_statements)
+    (:Task_BPMN-51121-Document_statements :Task_BPMN-51142-Compare_statements)
+    (:Task_BPMN-51142-Compare_statements :Task_BPMN-51136-Flag_contradictions)
+    (:Task_BPMN-51136-Flag_contradictions :Task_BPMN-51133-Prepare_statement_analysis_notes)
+    (:Task_BPMN-48756-Register_findings_ :Task_BPMN-49448-Conduct_trial)
+    (:Task_BPMN-49448-Conduct_trial :Task_BPMN-48978-Judicial_decision)
+    (:Task_BPMN-48978-Judicial_decision :Task_BPMN-48981-Register_decision)
+    (:Task_BPMN-48981-Register_decision :Task_BPMN-49436-Notify_parties)
+    (:Task_BPMN-49436-Notify_parties :Task_BPMN-48996-Archive_case_file)
+  }
+  ?from mm:r_Responsible ?fromResp .
+  ?to mm:r_Responsible ?toResp .
+  ?fromResp rdfs:label ?fromLabel .
+  ?toResp rdfs:label ?toLabel .
+  FILTER(?fromResp != ?toResp)
+}
+ORDER BY ?fromLabel ?toLabel
+How did you derive this answer?
+
+I followed the admissible branch from Complaint admissible? to Case preparation, then Case investigation, then Register findings, then Trial, because the inadmissible branch is excluded. To maximize responsibility handoffs, I selected the internal execution order inside each ad hoc subprocess that alternates responsible individuals as much as possible, while using each internal element at most once as required. In Case preparation, the order Assign investigation team, Contact involved parties, Prepare list of witnesses, Contact involved parties yields Rachel Bennett to Victor Hayes, Victor Hayes to Rachel Bennett, and Rachel Bennett to Victor Hayes. In Case investigation, I included the document collection path with both Request documents and Retrieve existing records, then Review collected documents and records, Issue additional request, Collect missing items, Prepare evidence set for analysis, Analyze documents and records, the on site investigation tasks, and the statement recording path through Flag contradictions, arranging them to maximize changes between Bianca Hayes, Samuel Grant, Alexander Moore, and Marinette Cheng. I also included the main flow handoff from Register complaint to Check admissibility, then from the last preparation responsibility to the first investigation responsibility, from Register findings to Conduct trial, and the trial sequence Conduct trial, Judicial decision, Register decision, Notify parties, Archive case file. Complaint closed is not actually reachable on the admissible branch, so the computation uses the admissible continuation of the process and reports the handoffs on the path with the greatest number of distinct person to person transitions.
