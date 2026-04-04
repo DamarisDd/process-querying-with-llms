@@ -1,0 +1,336 @@
+USER QUESTIONS
+TELeR LEVEL 1
+If the complaint is admissible, what is the maximum total execution time until the complaint is closed?
+
+If the complaint is admissible, which tasks belong to the path with the maximum total execution time until the complaint is closed?
+
+If the complaint is admissible, what is the minimum total execution time until the complaint is closed?
+
+If the complaint is admissible, which tasks belong to the path with the minimum total execution time until the complaint is closed?
+
+What is the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+Which tasks belong to the path with the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+What is the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+Which tasks belong to the path with the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"?
+
+If the complaint is admissible, what is the maximum total cost until the complaint is closed?
+
+If the complaint is admissible, which tasks belong to the path with the maximum total cost until the complaint is closed?
+
+If the complaint is admissible, what is the minimum total cost until the complaint is closed?
+
+If the complaint is admissible, which tasks belong to the path with the minimum total cost until the complaint is closed?
+
+What is the maximum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+Which tasks belong to the path with the maximum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+What is the minimum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+Which tasks belong to the path with the minimum total cost starting from "Identify required documents and records" until "Complaint closed"?
+
+If the complaint is admissible and until the complaint is closed, which tasks belong to the path that involves the highest number of distinct responsible individuals?
+
+If the complaint is admissible, which responsible individual appears most often on the path until the complaint is closed?
+
+If the complaint is admissible, which handoffs occur on the execution path with the highest number of responsibility handoffs until the complaint is closed?
+
+
+
+TELeR LEVEL 2
+If the complaint is admissible, what is the maximum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, which tasks belong to the path with the maximum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, what is the minimum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, which tasks belong to the path with the minimum total execution time until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+What is the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Which tasks belong to the path with the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+What is the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Which tasks belong to the path with the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, what is the maximum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, which tasks belong to the path with the maximum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, what is the minimum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, which tasks belong to the path with the minimum total cost until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+What is the maximum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Which tasks belong to the path with the maximum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+What is the minimum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+Which tasks belong to the path with the minimum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible and until the complaint is closed, which tasks belong to the path that involves the highest number of distinct responsible individuals? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, which responsible individual appears most often on the path until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+If the complaint is admissible, which handoffs occur on the execution path with the highest number of responsibility handoffs until the complaint is closed? To answer the question, identify the condition or source element and the exact target element, find all valid paths, including boundary-event continuations where relevant, that satisfy them, apply the ad-hoc subprocess assumptions, compute or extract the requested metrics for each path, treat handoffs, where relevant, as transfers of work between tasks or subprocesses assigned to different responsible individuals on the evaluated path, compare the paths and return the result from the best valid one.
+
+
+
+
+TELeR LEVEL 3
+If the complaint is admissible, what is the maximum total execution time until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, which tasks belong to the path with the maximum total execution time until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, what is the minimum total execution time until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, which tasks belong to the path with the minimum total execution time until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+What is the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+Which tasks belong to the path with the maximum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+What is the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+Which tasks belong to the path with the minimum total execution time starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, what is the maximum total cost until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, which tasks belong to the path with the maximum total cost until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, what is the minimum total cost until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, which tasks belong to the path with the minimum total cost until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+What is the maximum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+Which tasks belong to the path with the maximum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+What is the minimum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+Which tasks belong to the path with the minimum total cost starting from "Identify required documents and records" until "Complaint closed"? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible and until the complaint is closed, which tasks belong to the path that involves the highest number of distinct responsible individuals? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, which responsible individual appears most often on the path until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+If the complaint is admissible, which handoffs occur on the execution path with the highest number of responsibility handoffs until the complaint is closed? To answer the question:
+- Identify the source, the stated condition, if applicable, and the exact target; if no explicit source is given, begin from the start of the relevant process or subprocess.
+- Keep the exact target fixed throughout the reasoning.
+- Treat the condition as satisfied once the path passes through the required gateway outcome; after that, any later continuation, including interrupting or non-interrupting boundary-event continuations, remains eligible if it can still reach the exact target.
+- From the selected branch onward, trace every reachable continuation through tasks, subprocesses, nested subprocesses and boundary-event continuations.
+- Keep a candidate path only if it ends at the exact target named in the question.
+- For ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability.
+- In ad-hoc subprocesses, do not require internal sequence flows to prove internal reachability; internal tasks or subprocesses may be skipped or occur at most once, while modeled dependencies must still be respected.
+- If a boundary event is attached to an ad-hoc subprocess, it may occur after one or more compatible internal tasks or subprocesses have completed.
+- Use query methods to inspect sequence flows, boundary events, subprocess contents and target reachability before answering.
+- For each valid target-reaching path, compute or extract the requested result.
+- Compare only the valid target-reaching paths and return the result from the best one.
+
+
+
+TELeR LEVEL 4
+to be continued
