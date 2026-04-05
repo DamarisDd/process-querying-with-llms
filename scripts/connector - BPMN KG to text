@@ -1,0 +1,281 @@
+PREFIX mm: <http://bee-up.omilab.org/rdf/1_7#>
+PREFIX path: <http://www.ontotext.com/path#>
+PREFIX retr:       <http://www.ontotext.com/connectors/retrieval#>
+PREFIX retr-index: <http://www.ontotext.com/connectors/retrieval/instance#>
+
+INSERT DATA {
+  retr-index:bpmnprocess retr:createConnector '''
+{
+  "retrievalUrl": "http://localhost:8000",
+  "retrievalBearerToken": " ",
+
+  "types": [
+    "http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Sub-Process_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Start_Event_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Intermediate_Event_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_End_Event_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Exclusive_Gateway_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Non-exclusive_Gateway_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Data_Object_BPMN",
+    "http://bee-up.omilab.org/rdf/1_7#o_Performer",
+    "http://bee-up.omilab.org/rdf/1_7#o_Role",
+    "http://bee-up.omilab.org/rdf/1_7#o_Organizational_Unit",
+    "http://bee-up.omilab.org/rdf/1_7#m_Business_Process_Diagram_BPMN_2_0",
+    "http://bee-up.omilab.org/rdf/1_7#m_Working_Environment_Model",
+    "http://bee-up.omilab.org/rdf/1_7#r_Subsequent",
+    "http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN"
+  ],
+
+  "documentFilter": "bound(?subject)",
+  "fields": [
+    {
+      "fieldName": "subject",
+      "propertyChain": [
+        "localName()"
+      ]
+    },
+    {
+      "fieldName": "entityIri",
+      "propertyChain": [
+        "$self"
+      ],
+      "indexed": false
+    },
+    {
+      "fieldName": "elementType",
+      "propertyChain": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "localName()"
+      ],
+      "fieldTextPrefix": "is a",
+      "valueFilter": "$this in (<http://bee-up.omilab.org/rdf/1_7#o_Task_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Sub-Process_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Start_Event_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Intermediate_Event_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_End_Event_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Exclusive_Gateway_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Non-exclusive_Gateway_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Data_Object_BPMN>, <http://bee-up.omilab.org/rdf/1_7#o_Performer>, <http://bee-up.omilab.org/rdf/1_7#o_Role>, <http://bee-up.omilab.org/rdf/1_7#o_Organizational_Unit>, <http://bee-up.omilab.org/rdf/1_7#m_Business_Process_Diagram_BPMN_2_0>, <http://bee-up.omilab.org/rdf/1_7#m_Working_Environment_Model>, <http://bee-up.omilab.org/rdf/1_7#r_Subsequent>, <http://bee-up.omilab.org/rdf/1_7#r_Data_Association_BPMN>)"
+    },
+    {
+      "fieldName": "diagram",
+      "propertyChain": [
+        "http://www.comvantage.eu/mm#described_in",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "is described in:"
+    },
+    {
+      "fieldName": "referencedSubprocess",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Referenced_subprocess",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "references subprocess:"
+    },
+    {
+      "fieldName": "group",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Is_inside",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "is inside:"
+    },
+    {
+      "fieldName": "attachedTo",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Attached_to",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "is attached to:"
+    },
+    {
+      "fieldName": "responsiblePerformer",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Responsible",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "is carried out by:"
+    },
+    {
+      "fieldName": "responsibleRole",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Responsible",
+        "http://bee-up.omilab.org/rdf/1_7#r_has_Role",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "under role:"
+    },
+    {
+      "fieldName": "responsibleUnit",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Responsible",
+        "http://bee-up.omilab.org/rdf/1_7#r_Belongs_to",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "within unit:"
+    },
+    {
+      "fieldName": "belongsToSubUnit",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Belongs_to",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "belongs to sub-unit:"
+    },
+    {
+      "fieldName": "hasRole",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_has_Role",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "has role:"
+    },
+    {
+      "fieldName": "executionTime",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Execution_time"
+      ],
+      "fieldTextPrefix": "has execution time:"
+    },
+    {
+      "fieldName": "loopType",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Loop_type"
+      ],
+      "fieldTextPrefix": "has loop type:"
+    },
+    {
+      "fieldName": "sequentialExecution",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Sequential_execution"
+      ],
+      "fieldTextPrefix": "has sequential execution:"
+    },
+    {
+      "fieldName": "cardinality",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Cardinality"
+      ],
+      "fieldTextPrefix": "has cardinality:"
+    },
+    {
+      "fieldName": "referencedDataInput",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Referenced_data_input",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "uses referenced data input:"
+    },
+    {
+      "fieldName": "referencedDataOutput",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#r_Referenced_data_output",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "produces referenced data output:"
+    },
+    {
+      "fieldName": "cost",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Costs"
+      ],
+      "fieldTextPrefix": "costs"
+    },
+    {
+      "fieldName": "taskType",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Task_type"
+      ],
+      "fieldTextPrefix": "has task type:"
+    },
+    {
+      "fieldName": "subprocessType",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Sub-Process_type"
+      ],
+      "fieldTextPrefix": "has subprocess type:"
+    },
+    {
+      "fieldName": "gatewayType",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Gateway_type"
+      ],
+      "fieldTextPrefix": "has gateway type:"
+    },
+    {
+      "fieldName": "dataType",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Data_type"
+      ],
+      "fieldTextPrefix": "has data type:"
+    },
+    {
+      "fieldName": "modelType",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Type"
+      ],
+      "fieldTextPrefix": "has model type:"
+    },
+    {
+      "fieldName": "hourlyWage",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Hourly_wages"
+      ],
+      "fieldTextPrefix": "has hourly wage:"
+    },
+    {
+      "fieldName": "transitionLabel",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Denomination"
+      ],
+      "fieldTextPrefix": "has transition label:"
+    },
+    {
+      "fieldName": "transitionCondition",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Transition_condition"
+      ],
+      "fieldTextPrefix": "has transition condition:"
+    },
+    {
+      "fieldName": "isDefault",
+      "propertyChain": [
+        "http://bee-up.omilab.org/rdf/1_7#a_Default"
+      ],
+      "fieldTextPrefix": "is the default process path:"
+    },
+    {
+      "fieldName": "fromElement",
+      "propertyChain": [
+        "http://www.comvantage.eu/mm#from",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "starts from"
+    },
+    {
+      "fieldName": "fromType",
+      "propertyChain": [
+        "http://www.comvantage.eu/mm#from",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "localName()"
+      ],
+      "fieldTextPrefix": "source is a",
+      "valueFilter": "$this != <http://www.comvantage.eu/mm#o_Modelling_object>"
+    },
+    {
+      "fieldName": "toElement",
+      "propertyChain": [
+        "http://www.comvantage.eu/mm#to",
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "fieldTextPrefix": "goes to"
+    },
+    {
+      "fieldName": "toType",
+      "propertyChain": [
+        "http://www.comvantage.eu/mm#to",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "localName()"
+      ],
+      "fieldTextPrefix": "target is a",
+      "valueFilter": "$this != <http://www.comvantage.eu/mm#o_Modelling_object>"
+    }
+  ]
+}
+''' .
+}
