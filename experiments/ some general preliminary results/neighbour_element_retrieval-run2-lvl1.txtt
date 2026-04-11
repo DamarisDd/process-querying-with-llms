@@ -1,0 +1,87 @@
+Which tasks occur immediately after Register complaint?
+
+Check admissibility
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow with cv:from "Register complaint" (:Task_BPMN-48669-Register_complaint) and read its cv:to target: "Check admissibility" (:Task_BPMN-49218-Check_admissibility)
+
+Which tasks occur immediately before Check admissibility?
+
+Register complaint
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow whose cv:to is "Check admissibility" (:Task_BPMN-49218-Check_admissibility) and read its cv:from source: "Register complaint" (:Task_BPMN-48669-Register_complaint)
+
+Which tasks occur immediately before Register complaint?
+
+No entity found
+
+No query methods were called.
+How did you derive this answer?
+
+I checked the sequence-flow relation mm:r_Subsequent and looked for any relation with cv:to pointing to Register complaint. In the graph, Start Event Complaint received flows to Register complaint, but no task flows directly to Register complaint. Since you asked specifically for tasks immediately before it, there is no matching task, so the result is No entity found.
+
+Which tasks occur immediately after Interview involved parties?
+
+Compare statements
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow with cv:from = Task_BPMN-48943-Interview_involved_parties; its cv:to is Non-exclusive_Gateway_BPMN-49238-Non-exclusive_Gateway_BPMN-49238, and the outgoing flow from that gateway leads to Task_BPMN-49286-Compare_statements
+
+Which tasks occur immediately before Compare statements?
+
+Interview involved parties, Document statements
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow with cv:to = Task_BPMN-49286-Compare_statements; its cv:from is Non-exclusive_Gateway_BPMN-49238-Non-exclusive_Gateway_BPMN-49238, and the incoming flows to that gateway come from Task_BPMN-48943-Interview_involved_parties and Task_BPMN-49230-Document_statements
+
+Which tasks occur immediately after Attempt alternative methods?
+
+Record notification
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow with cv:from = Task_BPMN-49484-Attempt_alternative_methods; its cv:to is Task_BPMN-49480-Record_notification, labeled Record notification
+
+Which tasks occur immediately before Prepare evidence set for analysis?
+
+Collect missing items
+
+No query methods were called.
+How did you derive this answer?
+
+Found incoming sequence flows to Task_BPMN-49418-Prepare_evidence_set_for_analysis: one comes directly from Task_BPMN-49409-Collect_missing_items, and another comes from the gateway Evidence complete?; only the direct predecessor that is a task is Collect missing items
+
+What tasks occur immediately after Identify required documents and records?
+
+Request documents, Retrieve existing records
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow with cv:from = Task_BPMN-49342-Identify_required_documents_and_records; its cv:to is the inclusive gateway Required sources?, and that gateway has outgoing flows to Task_BPMN-49346-Request_documents and Task_BPMN-49356-Retrieve_existing_records
+
+Which tasks occur immediately before Register complaint?
+
+Complaint received
+
+Hint: you can also ask the model, for example
+No query methods were called.
+
+Which tasks occur immediately after Document and record collection?
+
+Analyze documents and records
+
+No query methods were called.
+How did you derive this answer?
+
+Found the sequence flow with cv:from = Sub-Process_BPMN-48955-Document_and_record_collection and cv:to = Task_BPMN-50986-Analyze_documents_and_records, labeled Analyze documents and records
