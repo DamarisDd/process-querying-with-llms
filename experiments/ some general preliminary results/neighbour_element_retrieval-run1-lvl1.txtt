@@ -1,0 +1,171 @@
+Which tasks occur immediately after Register complaint?
+
+Check admissibility
+
+No query methods were called.
+How did you derive this answer?
+
+By following the mm:r_Subsequent relation with cv:from = Register complaint and reading the cv:to target label: Check admissibility
+
+No query methods were called.
+Which tasks occur immediately before Check admissibility?
+
+Register complaint
+
+No query methods were called.
+How did you derive this answer?
+
+By finding the mm:r_Subsequent relation whose cv:to is Check admissibility and reading the cv:from source label: Register complaint
+
+No query methods were called.
+Which tasks occur immediately before Register complaint?
+
+Complaint received
+
+No query methods were called.
+How did you derive this answer?
+
+By finding the mm:r_Subsequent relation whose cv:to is Register complaint and reading the cv:from source label: Complaint received
+
+No query methods were called.
+Which tasks occur immediately after Interview involved parties?
+
+Non-exclusive Gateway (BPMN)-49238
+
+No query methods were called.
+Which tasks occur immediately before Compare statements?
+
+Non-exclusive Gateway (BPMN)-49238
+
+No query methods were called.
+How did you derive this answer?
+
+By finding the mm:r_Subsequent relation whose cv:to is Compare statements and reading the cv:from source label: Non-exclusive Gateway (BPMN)-49238
+
+No query methods were called.
+Which tasks occur immediately after Attempt alternative methods?
+
+Record notification
+
+Called FTS for IRI discovery: Full-text search via SPARQL
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX onto: <http://www.ontotext.com/>
+SELECT ?label ?iri {
+    ?label onto:fts ('''Attempt~ alternative~ methods~''' '*') .
+    ?iri rdfs:label|skos:prefLabel ?label .
+}
+Raw query:
+Attempt alternative methods
+Called SPARQL: Direct query
+PREFIX : <http://www.omilab.org#>
+PREFIX mm: <http://bee-up.omilab.org/rdf/1_7#>
+PREFIX cv: <http://www.comvantage.eu/mm#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label WHERE {
+  ?task rdfs:label "Attempt alternative methods" .
+  ?rel a mm:r_Subsequent ;
+       cv:from ?task ;
+       cv:to ?next .
+  ?next rdfs:label ?label .
+}
+How did you derive this answer?
+
+By locating the task with label Attempt alternative methods, then finding the mm:r_Subsequent relation with cv:from = that task and reading the cv:to target label: Record notification
+
+No query methods were called.
+Which tasks occur immediately before Prepare evidence set for analysis?
+
+Evidence complete?, Collect missing items
+
+No query methods were called.
+How did you derive this answer?
+
+By finding all mm:r_Subsequent relations whose cv:to is Prepare evidence set for analysis and reading the cv:from source labels: Evidence complete?, Collect missing items
+
+No query methods were called.
+What tasks occur immediately after Identify required documents and records?
+
+Required sources?
+
+No query methods were called.
+How did you derive this answer?
+
+By finding the mm:r_Subsequent relation with cv:from = Identify required documents and records and reading the cv:to target label: Required sources?
+
+No query methods were called.
+Which tasks can occur if inconsistencies are identified?
+
+Flag contradictions
+
+No query methods were called.
+How did you derive this answer?
+
+By locating the exclusive gateway Inconsistencies identified? and following the mm:r_Subsequent branch with mm:a_Denomination = yes, which leads to Flag contradictions
+
+No query methods were called.
+Which subprocesses can occur after Check admissibility when the complaint is admissible?
+
+Case preparation
+
+No query methods were called.
+How did you derive this answer?
+
+By following the sequence from Check admissibility to the gateway Complaint admissible?, then taking the mm:r_Subsequent branch with mm:a_Denomination = yes, which leads to the subprocess Case preparation
+
+No query methods were called.
+What occurs if the complaint is found inadmissible?
+
+Notify inadmissibility, Archive complaint file, Complaint closed
+
+No query methods were called.
+How did you derive this answer?
+
+By following the sequence from Check admissibility to the gateway Complaint admissible?, then taking the branch with mm:a_Denomination = no to Notify inadmissibility, followed by Archive complaint file, and then the end event Complaint closed
+
+No query methods were called.
+Which tasks occur if the complaint is found inadmissible?
+
+Notify inadmissibility, Archive complaint file
+
+No query methods were called.
+How did you derive this answer?
+
+By following the sequence from Check admissibility to the gateway Complaint admissible?, then taking the mm:r_Subsequent branch with mm:a_Denomination = no to Notify inadmissibility, followed by Archive complaint file
+
+No query methods were called.
+Which tasks occur if the complaint is withdrawn?
+
+Register withdrawal, Archive complaint file
+
+No query methods were called.
+How did you derive this answer?
+
+By following the mm:r_Subsequent path starting from the intermediate event Complaint withdrawn to Register withdrawal, then to Archive complaint file
+
+No query methods were called.
+Which tasks occur if the persons are not found?
+
+Unreachable parties procedure, Case investigation, Register findings , Trial, Case closed
+
+No query methods were called.
+How did you derive this answer?
+
+By following the mm:r_Subsequent path starting from the intermediate event Persons not found to Unreachable parties procedure, then to Case investigation, Register findings , Trial, and finally the end event Case closed
+
+No query methods were called.
+Which tasks occur immediately before Register complaint?
+
+Complaint received
+
+Hint: you can also ask the model, for example
+No query methods were called.
+
+Which tasks occur immediately after Document and record collection?
+
+Analyze documents and records
+
+No query methods were called.
+How did you derive this answer?
+
+By finding the mm:r_Subsequent relation with cv:from = Document and record collection and reading the cv:to label: Analyze documents and records
